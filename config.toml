@@ -1,0 +1,33 @@
+# Claude Hook Notification Service Configuration
+
+[server]
+host = "0.0.0.0"
+port = 8080
+debug = false
+
+[sounds]
+# 音频文件路径配置 - 请根据实际路径修改
+base_path = "sounds"
+
+# 不同事件的音频文件配置
+[sounds.files]
+# Tool 相关事件
+tool_start = "happy-message-ping-351298.mp3"              # 工具开始执行
+tool_complete = "happy-message-ping-351298.mp3"        # 工具执行完成
+tool_error = "happy-message-ping-351298.mp3"              # 工具执行错误
+
+# 对话相关事件  
+conversation_start = "happy-message-ping-351298.mp3"  # 对话开始
+conversation_end = "happy-message-ping-351298.mp3"      # 对话结束
+
+# 用户交互事件
+user_prompt_submit = "happy-message-ping-351298.mp3"         # 用户提交问题
+assistant_response = "happy-message-ping-351298.mp3"  # 助手回复
+
+# 系统事件
+system_error = "happy-message-ping-351298.mp3"              # 系统错误
+general_notification = "happy-message-ping-351298.mp3"      # 通用通知
+
+[logging]
+level = "INFO"
+format = "<green>{time:YYYY-MM-DD HH:mm:ss}</green> | <level>{level: <8}</level> | <cyan>{name}</cyan>:<cyan>{function}</cyan>:<cyan>{line}</cyan> - <level>{message}</level>"
